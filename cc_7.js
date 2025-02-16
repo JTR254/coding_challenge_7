@@ -30,3 +30,24 @@ const calculateLoyaltyDiscount = (amount, years) => { // creates arrow function 
 
 console.log (`Discounted Price: $${calculateLoyaltyDiscount(100, 6).toFixed(2)}`) // logs the function to the console - Output: Discounted Price: $85.00
 console.log (`Discounted Price: $${calculateLoyaltyDiscount(200, 2).toFixed(2)}`) // logs the function to the console - Output: Discounted Price: $190.00
+
+// Task 4 - Product Shipping Cost Calculation
+
+const calculateShippingCost = (weight, location, expedited = false) => { // creates arrow function that determines the shipping price based on weight, location, and if it is expedited
+   let cost;
+    if (location === "USA") { // if the location is "USA", then multiply .5 by the weight and then add 5
+        cost = 5 + .5 * weight
+    } else if (location === "Canada") { // if the location is "Canada", then multiply .7 by the weight and add 10
+        cost = 10 + .7 * weight
+    }
+
+    if (expedited) { // if expedited, add $10 to the cost
+        cost += 10
+    }
+
+    return `Shipping Cost: $${cost.toFixed(2)}`
+};
+
+console.log(calculateShippingCost(10, "USA", true)) // logs the function to the console - Output: Shipping Cost: $20.00
+console.log(calculateShippingCost(5, "Canada", false)) // logs the function to the console - Output: Shipping Cost: $13.50
+
