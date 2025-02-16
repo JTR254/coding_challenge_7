@@ -51,3 +51,12 @@ const calculateShippingCost = (weight, location, expedited = false) => { // crea
 console.log(calculateShippingCost(10, "USA", true)) // logs the function to the console - Output: Shipping Cost: $20.00
 console.log(calculateShippingCost(5, "Canada", false)) // logs the function to the console - Output: Shipping Cost: $13.50
 
+// Task 5 - Business Loan Interest Calculation
+
+function calculateLoanInterest(principal, rate, years) { // creates a function that calculates interest
+    let interest;
+    return interest = principal * rate * years // the equation is principal * rate * years
+}
+
+console.log(`Loan Interest: $${calculateLoanInterest(1000, .05, 3).toFixed(2)}`) // logs the function to the console - Output: Loan Interest: $150
+console.log(`Loan Interest: $${calculateLoanInterest(5000, .07, 5).toFixed(2)}`) // logs the function to the console - Output: Loan Interest: $1750
