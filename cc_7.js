@@ -60,3 +60,10 @@ function calculateLoanInterest(principal, rate, years) { // creates a function t
 
 console.log(`Loan Interest: $${calculateLoanInterest(1000, .05, 3).toFixed(2)}`) // logs the function to the console - Output: Loan Interest: $150
 console.log(`Loan Interest: $${calculateLoanInterest(5000, .07, 5).toFixed(2)}`) // logs the function to the console - Output: Loan Interest: $1750
+
+// Task 6 - Filtering High-Value Transactions
+
+let transactions = [500, 1200, 3000, 800, 2200]; // declares an array of transactions
+let filterHighValueTransactions = transactions.filter(amount => amount > 1000); // uses filter function to filter the transactions aboave 1000
+
+console.log(filterHighValueTransactions) // logs the function to the console
