@@ -82,3 +82,17 @@ expenseTracker=createBudgetTracker();
 
 console.log(expenseTracker(300)) // logs the function to the console
 console.log(expenseTracker(200)) // logs the function to the console
+
+// Task 8 - Business Growth Projection
+
+function calculateGrowth(years, revenue) { // creates function that calculates the growth of a business
+    if (years >= 10) {
+        return `Projected Revenue: $${revenue.toFixed(2)}`;
+    }
+    return calculateGrowth(years + 1, revenue * 1.05) // returns equation that as the years increase by 1, revenue increases by 5%
+    
+
+};
+
+console.log(calculateGrowth(8, 1000)) // logs the function to the console
+console.log(calculateGrowth(5, 5000)) // logs the function to the console
