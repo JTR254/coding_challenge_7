@@ -67,3 +67,18 @@ let transactions = [500, 1200, 3000, 800, 2200]; // declares an array of transac
 let filterHighValueTransactions = transactions.filter(amount => amount > 1000); // uses filter function to filter the transactions aboave 1000
 
 console.log(filterHighValueTransactions) // logs the function to the console
+
+// Task 7 - Budget Tracker
+
+function createBudgetTracker(expense) { // creates function that keeps track of the budget
+    let balance = 0
+    return function(amount) {
+        balance -= amount; // subtracts the amount from the current balance
+        return `Current Balance: -$${balance}`
+    };
+};
+
+expenseTracker=createBudgetTracker();
+
+console.log(expenseTracker(300)) // logs the function to the console
+console.log(expenseTracker(200)) // logs the function to the console
